@@ -1,74 +1,92 @@
-/* 
+/*
    Print Stylesheet for Product Manual
    Target: WeasyPrint
 */
 
 @page {
     size: A4;
-    margin: 20mm;
+    margin: 10mm;
+    /* Reduced from 20mm */
 
     @top-center {
         content: "产品技术参数说明书";
         font-size: 9pt;
         color: #666;
+        margin-bottom: 5mm;
+        /* reduced space */
     }
 
     @bottom-center {
         content: counter(page);
-        font-size: 10pt;
+        font-size: 9pt;
     }
 }
 
 body {
     font-family: "Microsoft YaHei", "SimHei", sans-serif;
-    font-size: 11pt;
-    line-height: 1.5;
+    font-size: 10pt;
+    /* Reduced from 11pt */
+    line-height: 1.3;
+    /* Reduced from 1.5 */
     color: #333;
 }
 
 h1 {
-    font-size: 18pt;
-    border-bottom: 2px solid #336699;
-    padding-bottom: 5px;
-    margin-top: 2em;
+    font-size: 15pt;
+    /* Reduced from 18pt */
+    border-bottom: 1px solid #336699;
+    /* Thinner border */
+    padding-bottom: 3px;
+    margin-top: 0.8em;
+    /* Drastically reduced from 2em */
+    margin-bottom: 0.5em;
     break-before: auto;
-    /* Allow H1 to start on new page if needed, or adjust to 'always' */
 }
 
 h2 {
-    font-size: 14pt;
+    font-size: 12pt;
+    /* Reduced from 14pt */
     color: #336699;
-    margin-top: 1.5em;
-    border-left: 5px solid #336699;
-    padding-left: 10px;
+    margin-top: 0.8em;
+    /* Reduced from 1.5em */
+    margin-bottom: 0.4em;
+    border-left: 4px solid #336699;
+    padding-left: 8px;
 }
 
 h3 {
-    font-size: 12pt;
+    font-size: 11pt;
+    /* Reduced from 12pt */
     font-weight: bold;
-    margin-top: 1.2em;
+    margin-top: 0.6em;
+    margin-bottom: 0.3em;
 }
 
 /* Bullet points spacing */
 ul {
-    padding-left: 20px;
+    padding-left: 18px;
+    margin: 0.3em 0;
+    /* Reduced vertical margin */
 }
 
 li {
-    margin-bottom: 5px;
+    margin-bottom: 2px;
+    /* Reduced from 5px */
 }
 
 /* Table styling */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 1em 0;
+    margin: 0.5em 0;
+    /* Reduced from 1em */
 }
 
 th,
 td {
     border: 1px solid #ccc;
-    padding: 8px;
+    padding: 4px;
+    /* Reduced from 8px */
     text-align: left;
 }
 
@@ -83,7 +101,8 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 10px auto;
+    margin: 5px auto;
+    /* Reduced from 10px */
     border: 1px solid #eee;
 }
 
@@ -91,7 +110,8 @@ img {
 .image-grid {
     display: flex;
     width: 100%;
-    margin: 15px 0;
+    margin: 8px 0;
+    /* Reduced from 15px */
     justify-content: space-between;
     align-items: flex-start;
     /* Do not stretch height */
@@ -122,8 +142,10 @@ img {
 .installation-guide {
     display: flex;
     justify-content: space-between;
-    gap: 30px;
-    margin-top: 15px;
+    gap: 20px;
+    /* Reduced gap */
+    margin-top: 10px;
+    /* Reduced margin */
     align-items: flex-start;
 }
 
@@ -133,15 +155,17 @@ img {
 }
 
 .installation-guide p {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    /* Reduced margin */
     text-align: left;
     /* Keep text left-aligned for readability */
-    font-size: 10pt;
+    font-size: 9pt;
+    /* Slightly smaller for captions */
 }
 
 .installation-guide img {
-    max-width: 80%;
-    /* Don't be too huge */
+    max-width: 70%;
+    /* Smaller images to save vertical space if needed */
     height: auto;
     margin: 0 auto;
     border: 1px solid #eee;
@@ -151,7 +175,7 @@ img {
 /* Caption styling */
 .image-grid figcaption {
     font-size: 8pt;
-    margin-top: 5px;
+    margin-top: 3px;
     color: #666;
     line-height: normal;
     /* Restore line-height */
@@ -170,5 +194,6 @@ hr {
     border: 0;
     height: 1px;
     background-color: #ccc;
-    margin: 20px 0;
+    margin: 10px 0;
+    /* Reduced from 20px */
 }
