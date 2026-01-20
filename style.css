@@ -197,3 +197,21 @@ hr {
     margin: 10px 0;
     /* Reduced from 20px */
 }
+
+/* Measurement Specs Layout (2-column: Temp + Humidity) */
+.specs-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.specs-column {
+    flex: 1;
+}
+
+/* Remove default margins for lists inside columns to save space */
+.specs-column ul {
+    margin: 0;
+    padding-left: 15px;
+}
