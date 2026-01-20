@@ -118,6 +118,36 @@ img {
     border: 1px solid #eee;
 }
 
+/* Installation Guide Layout (2-column: Install + QR) */
+.installation-guide {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 15px;
+    align-items: flex-start;
+}
+
+.installation-guide .install-block {
+    flex: 1;
+    text-align: center;
+}
+
+.installation-guide p {
+    margin-bottom: 10px;
+    text-align: left;
+    /* Keep text left-aligned for readability */
+    font-size: 10pt;
+}
+
+.installation-guide img {
+    max-width: 80%;
+    /* Don't be too huge */
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid #eee;
+    display: block;
+}
+
 /* Caption styling */
 .image-grid figcaption {
     font-size: 8pt;
