@@ -87,30 +87,44 @@ img {
     border: 1px solid #eee;
 }
 
-/* Image Row Layout */
-.image-row {
+/* Image Grid Layout - HTML Wrapper Approach */
+.image-grid {
     display: flex;
+    width: 100%;
+    margin: 15px 0;
     justify-content: space-between;
-    gap: 10px;
-    margin: 10px 0;
+    align-items: flex-start;
+    /* Do not stretch height */
+    gap: 3px;
 }
 
-/* Target any container Pandoc creates (usually p or figure) */
-.image-row>* {
-    margin: 0;
+/* The wrapper divs are the flex items */
+.image-grid>div {
     flex: 1;
-    text-align: center;
-    /* Ensure no extra padding disrupts the flex */
+    /* Divide space equally */
+    min-width: 0;
+    /* Allow shrinking */
+    margin: 0;
     padding: 0;
+    text-align: center;
 }
 
-.image-row img {
+/* Images inside wrappers */
+.image-grid img {
     width: 100%;
     height: auto;
-    margin: 0;
-    border: 1px solid #eee;
+    /* Preserve aspect ratio */
     display: block;
-    /* Fix vertical alignment issues */
+    border: 1px solid #eee;
+}
+
+/* Caption styling */
+.image-grid figcaption {
+    font-size: 8pt;
+    margin-top: 5px;
+    color: #666;
+    line-height: normal;
+    /* Restore line-height */
 }
 
 /* Code blocks (if any) */

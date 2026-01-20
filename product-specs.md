@@ -31,12 +31,12 @@
 - 同时按住中间的↓和↑按键5秒钟进入Wi-Fi配网界面，用手机或Pad扫描屏幕上显示的二维码进入Wi-Fi配网程序，设置设备运行时所要连接的Wi-Fi AP的SSID和密码信息。
 - 同时按住两侧的 ⟲ 和 √ 按键5秒钟进入恢复出厂设置界面。设置恢复出厂设置并重启整个过程持续约十来秒。
 
-::: {.image-row}
-![panel](./images/th-with-sensor.png)
-![ip](./images/panel-ip.png)
-![setup](./images/up-down-hold.png)
-![reset](./images/reset.png)
-:::
+<div class="image-grid">
+  <div><img src="./images/th-with-sensor.png"></div>
+  <div><img src="./images/panel-ip.png"></div>
+  <div><img src="./images/up-down-hold.png"></div>
+  <div><img src="./images/reset.png"></div>
+</div>
 
 # 安装说明
 
