@@ -1,0 +1,130 @@
+/* 
+   Print Stylesheet for Product Manual
+   Target: WeasyPrint
+*/
+
+@page {
+    size: A4;
+    margin: 20mm;
+
+    @top-center {
+        content: "产品技术参数说明书";
+        font-size: 9pt;
+        color: #666;
+    }
+
+    @bottom-center {
+        content: counter(page);
+        font-size: 10pt;
+    }
+}
+
+body {
+    font-family: "Microsoft YaHei", "SimHei", sans-serif;
+    font-size: 11pt;
+    line-height: 1.5;
+    color: #333;
+}
+
+h1 {
+    font-size: 18pt;
+    border-bottom: 2px solid #336699;
+    padding-bottom: 5px;
+    margin-top: 2em;
+    break-before: auto;
+    /* Allow H1 to start on new page if needed, or adjust to 'always' */
+}
+
+h2 {
+    font-size: 14pt;
+    color: #336699;
+    margin-top: 1.5em;
+    border-left: 5px solid #336699;
+    padding-left: 10px;
+}
+
+h3 {
+    font-size: 12pt;
+    font-weight: bold;
+    margin-top: 1.2em;
+}
+
+/* Bullet points spacing */
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f0f4f8;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Image handling */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border: 1px solid #eee;
+}
+
+/* Image Row Layout */
+.image-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+/* Target any container Pandoc creates (usually p or figure) */
+.image-row>* {
+    margin: 0;
+    flex: 1;
+    text-align: center;
+    /* Ensure no extra padding disrupts the flex */
+    padding: 0;
+}
+
+.image-row img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    border: 1px solid #eee;
+    display: block;
+    /* Fix vertical alignment issues */
+}
+
+/* Code blocks (if any) */
+pre,
+code {
+    font-family: Consolas, monospace;
+    background-color: #f5f5f5;
+    font-size: 0.9em;
+}
+
+/* Horizontal rule */
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #ccc;
+    margin: 20px 0;
+}
