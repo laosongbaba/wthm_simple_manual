@@ -52,6 +52,6 @@ Supports IEEE 802.11 b/g/n standard 2.4 GHz band Wi-Fi networks.
 </div>
 <div class="install-block">
 <p>Scan the QR code to view detailed user instructions</p>
-<img src="./images/wthm-docs-link.png">
+<img src="./images/wthm-docs-link.png" style="width: 50%;">
 </div>
 </div>
