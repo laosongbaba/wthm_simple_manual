@@ -9,3 +9,6 @@ product-specs.html
 .DS_Store
 Thumbs.db
 MATCH_CASE
+
+*.swp
+*.~

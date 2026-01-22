@@ -3,6 +3,10 @@ $inputFile = "product-specs.md"
 $htmlFile = "product-specs.html"
 $pdfFile = "product-specs.pdf"
 
+$inputFileEn = "product-specs_en.md"
+$htmlFileEn = "product-specs_en.html"
+$pdfFileEn = "product-specs_en.pdf"
+
 # Add GTK3 to PATH for the current process
 $gtkPath = "D:\Program Files\GTK3-Runtime Win64\bin"
 if (Test-Path $gtkPath) {
@@ -20,23 +24,43 @@ if (-not (Get-Command pandoc -ErrorAction SilentlyContinue)) {
 $weasyCmd = "python"
 $weasyArgs = "-m", "weasyprint"
 
-Write-Host "Step 1: Converting Markdown to HTML..."
+# --- Chinese Version ---
+Write-Host "Step 1 (CN): Converting Markdown to HTML..."
 # --standalone is needed to make a full HTML file
 # --template uses our custom template
-# --metadata sets the page title
-pandoc $inputFile -o $htmlFile --template=template.html --metadata pagetitle="Product Manual" --standalone
+# --metadata sets the page title and language
+pandoc $inputFile -o $htmlFile --template=template.html --metadata pagetitle="Product Manual" --metadata lang="zh-CN" --standalone
 
 if ($LASTEXITCODE -ne 0) {
-    Write-Error "Pandoc conversion failed."
+    Write-Error "Pandoc conversion (CN) failed."
     exit $LASTEXITCODE
 }
 
-Write-Host "Step 2: Converting HTML to PDF with WeasyPrint..."
+Write-Host "Step 2 (CN): Converting HTML to PDF with WeasyPrint..."
 & $weasyCmd $weasyArgs $htmlFile $pdfFile
 
 if ($LASTEXITCODE -ne 0) {
-    Write-Error "WeasyPrint conversion failed."
+    Write-Error "WeasyPrint conversion (CN) failed."
     exit $LASTEXITCODE
 }
 
-Write-Host "Success! PDF generated at: $pdfFile"
+# --- English Version ---
+Write-Host "Step 1 (EN): Converting Markdown to HTML..."
+pandoc $inputFileEn -o $htmlFileEn --template=template.html --metadata pagetitle="Product Manual (EN)" --metadata lang="en" --standalone
+
+if ($LASTEXITCODE -ne 0) {
+    Write-Error "Pandoc conversion (EN) failed."
+    exit $LASTEXITCODE
+}
+
+Write-Host "Step 2 (EN): Converting HTML to PDF with WeasyPrint..."
+& $weasyCmd $weasyArgs $htmlFileEn $pdfFileEn
+
+if ($LASTEXITCODE -ne 0) {
+    Write-Error "WeasyPrint conversion (EN) failed."
+    exit $LASTEXITCODE
+}
+
+Write-Host "Success! PDFs generated at:"
+Write-Host "  - $pdfFile"
+Write-Host "  - $pdfFileEn"
