@@ -18,10 +18,11 @@
         /* Minimal space */
     }
 
-    @bottom-center {
+    @bottom-right {
         content: "https://www.monigear.com/";
         font-size: 8pt;
         vertical-align: top;
+        padding-right: 10mm;
     }
 }
 
