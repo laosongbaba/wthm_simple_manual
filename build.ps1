@@ -1,11 +1,11 @@
 # Build Script for Product Manual
-$inputFile = "product-specs.md"
-$htmlFile = "product-specs.html"
-$pdfFile = "product-specs.pdf"
+$inputFile = "wthm_simple_manual.md"
+$htmlFile = "wthm_simple_manual.html"
+$pdfFile = "wthm_simple_manual.pdf"
 
-$inputFileEn = "product-specs_en.md"
-$htmlFileEn = "product-specs_en.html"
-$pdfFileEn = "product-specs_en.pdf"
+$inputFileEn = "wthm_simple_manual_en.md"
+$htmlFileEn = "wthm_simple_manual_en.html"
+$pdfFileEn = "wthm_simple_manual_en.pdf"
 
 # Add GTK3 to PATH for the current process
 $gtkPath = "D:\Program Files\GTK3-Runtime Win64\bin"
