@@ -6,15 +6,13 @@
 <div class="specs-column">
 <ul>
 <li>Temperature Range: -25 ~ +65 ℃</li>
-<li>Temperature Typical Accuracy: ±0.2°C (0~65°C range), ±0.5°C (Full Range)</li>
-<li>Temperature Max Error: ±0.4°C (0~65°C range), ±0.8°C (Full Range)</li>
+<li>Accuracy: ±0.4°C (0~65°C range), ±0.8°C (Full Range)</li>
 </ul>
 </div>
 <div class="specs-column">
 <ul>
 <li>Relative Humidity Range: 0 ~ 100 %RH</li>
-<li>Humidity Typical Accuracy: ±2% (10~90% range), ±3% (Full Range)</li>
-<li>Humidity Max Error: ±3.5% (10~90% range), ±5% (Full Range)</li>
+<li>Accuracy: ±3.5% (10~90% range), ±5% (Full Range)</li>
 </ul>
 </div>
 </div>
