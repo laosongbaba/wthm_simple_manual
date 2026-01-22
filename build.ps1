@@ -7,12 +7,6 @@ $inputFileEn = "wthm_simple_manual_en.md"
 $htmlFileEn = "wthm_simple_manual_en.html"
 $pdfFileEn = "wthm_simple_manual_en.pdf"
 
-# Add GTK3 to PATH for the current process
-$gtkPath = "D:\Program Files\GTK3-Runtime Win64\bin"
-if (Test-Path $gtkPath) {
-    $env:PATH = "$gtkPath;" + $env:PATH
-}
-
 Write-Host "Checking requirements..."
 if (-not (Get-Command pandoc -ErrorAction SilentlyContinue)) {
     Write-Error "Pandoc is not installed or not in PATH."
