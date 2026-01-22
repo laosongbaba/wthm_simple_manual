@@ -46,7 +46,7 @@ Supports IEEE 802.11 b/g/n standard 2.4 GHz band Wi-Fi networks.
 # Installation Instructions
 
 <div class="installation-guide">
-<div class="install-block" style="flex: 1.3;">
+<div class="install-block" style="flex: 1.2;">
 <p>The device can be fixed to a wall or flat surface using the backplate bracket and screws.</p>
 <img src="./images/wthm-install-m1-line.png" style="width: 80%; max-width: 100%;">
 </div>
