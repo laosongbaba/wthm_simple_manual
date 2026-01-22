@@ -152,8 +152,15 @@ img {
     align-items: flex-start;
 }
 
-.installation-guide .install-block {
-    flex: 1;
+.installation-guide .install-block:first-child {
+    flex: 1.3;
+    /* Larger left column */
+    text-align: left;
+}
+
+.installation-guide .install-block:last-child {
+    flex: 0.8;
+    /* Smaller right column */
     text-align: center;
 }
 
