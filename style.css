@@ -141,6 +141,14 @@ img {
     border: 1px solid #eee;
 }
 
+/* Compact Grid for English version to save space */
+.compact-grid img {
+    max-width: 80%;
+    /* Reduce width to reduce height */
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
 /* Installation Guide Layout (2-column: Install + QR) */
 .installation-guide {
     display: flex;

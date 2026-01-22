@@ -22,7 +22,7 @@
 
 ## Power Supply
 
-- Supports standard USB Type-C 5V power supply. Rated operating current 100mA, peak operating current less than 200mA.
+- Supports USB Type-C 5V input. Rated current: 100mA, Peak current: < 200mA.
 - Supports internal DC power terminal supply, rated input voltage DC12V, range DC9~28V.
 
 
@@ -38,7 +38,7 @@ Supports IEEE 802.11 b/g/n standard 2.4 GHz band Wi-Fi networks.
 - Press and hold the middle ↓ and ↑ keys simultaneously for 5 seconds to enter the Wi-Fi configuration interface. Scan the QR code on the screen with a phone or pad to enter the Wi-Fi configuration program.
 - Press and hold the side ⟲ and √ keys simultaneously for 5 seconds to enter the factory reset interface. The factory reset and reboot process takes about ten seconds.
 
-<div class="image-grid">
+<div class="image-grid compact-grid">
   <div><img src="./images/th-with-sensor.png"></div>
   <div><img src="./images/panel-ip.png"></div>
   <div><img src="./images/up-down-hold.png"></div>
