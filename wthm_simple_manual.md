@@ -50,7 +50,7 @@
 <div class="installation-guide">
 <div class="install-block">
 <p>可通过安装背板支架并使用螺丝将设备固定在墙面或平面上。</p>
-<img src="./images/wthm-install-m1-line.png">
+<img src="./images/wthm-install-m1-line-note.png">
 </div>
 <div class="install-block">
 <p>扫描二维码查看详细使用说明</p>

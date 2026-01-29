@@ -34,7 +34,7 @@ Supports IEEE 802.11 b/g/n standard 2.4 GHz band Wi-Fi networks.
 - In normal display mode, the device LCD shows temperature, humidity, and other parameter values.
 - Press and hold the √ key for 1 second to enter the device parameter interface, where you can view device IP address, time, MAC address, Wi-Fi network, firmware version, etc.
 - Press and hold the middle ↓ and ↑ keys simultaneously for 5 seconds to enter the Wi-Fi configuration interface. Scan the QR code on the screen with a phone or pad to enter the Wi-Fi configuration program.
-- Press and hold the side ⟲ and √ keys simultaneously for 5 seconds to enter the factory reset interface. The factory reset and reboot process takes about ten seconds.
+- Press and hold the side ⟲ and √ keys simultaneously for 5 seconds to enter the factory reset interface.
 
 <div class="image-grid compact-grid">
   <div><img src="./images/th-with-sensor.png"></div>
@@ -46,12 +46,12 @@ Supports IEEE 802.11 b/g/n standard 2.4 GHz band Wi-Fi networks.
 # Installation Instructions
 
 <div class="installation-guide">
-<div class="install-block" style="flex: 1.2;">
+<div class="install-block" style="flex: 1.4;">
 <p>The device can be fixed to a wall or flat surface using the backplate bracket and screws.</p>
-<img src="./images/wthm-install-m1-line.png" style="width: 80%; max-width: 100%;">
+<img src="./images/wthm-install-m1-line-note.png" style="width: 90%; max-width: 100%;">
 </div>
 <div class="install-block" style="flex: 1;">
 <p>Scan the QR code to view detailed user instructions</p>
-<img src="./images/wthm-docs-link.png" style="width: 60%;">
+<img src="./images/wthm-docs-link.png" style="width: 50%;">
 </div>
 </div>
