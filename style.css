@@ -9,13 +9,7 @@
     /* Drastically reduced from 10mm */
 
     @top-center {
-        content: "WTHM Simple Manual";
-        font-size: 8pt;
-        /* Smaller font */
-        color: #666;
-        vertical-align: bottom;
-        margin-bottom: 2mm;
-        /* Minimal space */
+        content: "";
     }
 
     @bottom-right {

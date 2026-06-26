@@ -7,6 +7,22 @@ $inputFileEn = "wthm_simple_manual_en.md"
 $htmlFileEn = "wthm_simple_manual_en.html"
 $pdfFileEn = "wthm_simple_manual_en.pdf"
 
+$inputFileFr = "wthm_simple_manual_fr.md"
+$htmlFileFr = "wthm_simple_manual_fr.html"
+$pdfFileFr = "wthm_simple_manual_fr.pdf"
+
+$inputFileDe = "wthm_simple_manual_de.md"
+$htmlFileDe = "wthm_simple_manual_de.html"
+$pdfFileDe = "wthm_simple_manual_de.pdf"
+
+$inputFileEs = "wthm_simple_manual_es.md"
+$htmlFileEs = "wthm_simple_manual_es.html"
+$pdfFileEs = "wthm_simple_manual_es.pdf"
+
+$inputFileIt = "wthm_simple_manual_it.md"
+$htmlFileIt = "wthm_simple_manual_it.html"
+$pdfFileIt = "wthm_simple_manual_it.pdf"
+
 Write-Host "Checking requirements..."
 if (-not (Get-Command pandoc -ErrorAction SilentlyContinue)) {
     Write-Error "Pandoc is not installed or not in PATH."
@@ -55,6 +71,78 @@ if ($LASTEXITCODE -ne 0) {
     exit $LASTEXITCODE
 }
 
+# --- French Version ---
+Write-Host "Step 1 (FR): Converting Markdown to HTML..."
+pandoc $inputFileFr -o $htmlFileFr --template=template.html --metadata pagetitle="Manuel du Produit (FR)" --metadata lang="fr" --standalone
+
+if ($LASTEXITCODE -ne 0) {
+    Write-Error "Pandoc conversion (FR) failed."
+    exit $LASTEXITCODE
+}
+
+Write-Host "Step 2 (FR): Converting HTML to PDF with WeasyPrint..."
+& $weasyCmd $weasyArgs $htmlFileFr $pdfFileFr
+
+if ($LASTEXITCODE -ne 0) {
+    Write-Error "WeasyPrint conversion (FR) failed."
+    exit $LASTEXITCODE
+}
+
+# --- German Version ---
+Write-Host "Step 1 (DE): Converting Markdown to HTML..."
+pandoc $inputFileDe -o $htmlFileDe --template=template.html --metadata pagetitle="Produkthandbuch (DE)" --metadata lang="de" --standalone
+
+if ($LASTEXITCODE -ne 0) {
+    Write-Error "Pandoc conversion (DE) failed."
+    exit $LASTEXITCODE
+}
+
+Write-Host "Step 2 (DE): Converting HTML to PDF with WeasyPrint..."
+& $weasyCmd $weasyArgs $htmlFileDe $pdfFileDe
+
+if ($LASTEXITCODE -ne 0) {
+    Write-Error "WeasyPrint conversion (DE) failed."
+    exit $LASTEXITCODE
+}
+
+# --- Spanish Version ---
+Write-Host "Step 1 (ES): Converting Markdown to HTML..."
+pandoc $inputFileEs -o $htmlFileEs --template=template.html --metadata pagetitle="Manual del Producto (ES)" --metadata lang="es" --standalone
+
+if ($LASTEXITCODE -ne 0) {
+    Write-Error "Pandoc conversion (ES) failed."
+    exit $LASTEXITCODE
+}
+
+Write-Host "Step 2 (ES): Converting HTML to PDF with WeasyPrint..."
+& $weasyCmd $weasyArgs $htmlFileEs $pdfFileEs
+
+if ($LASTEXITCODE -ne 0) {
+    Write-Error "WeasyPrint conversion (ES) failed."
+    exit $LASTEXITCODE
+}
+
+# --- Italian Version ---
+Write-Host "Step 1 (IT): Converting Markdown to HTML..."
+pandoc $inputFileIt -o $htmlFileIt --template=template.html --metadata pagetitle="Manuale del Prodotto (IT)" --metadata lang="it" --standalone
+
+if ($LASTEXITCODE -ne 0) {
+    Write-Error "Pandoc conversion (IT) failed."
+    exit $LASTEXITCODE
+}
+
+Write-Host "Step 2 (IT): Converting HTML to PDF with WeasyPrint..."
+& $weasyCmd $weasyArgs $htmlFileIt $pdfFileIt
+
+if ($LASTEXITCODE -ne 0) {
+    Write-Error "WeasyPrint conversion (IT) failed."
+    exit $LASTEXITCODE
+}
+
 Write-Host "Success! PDFs generated at:"
 Write-Host "  - $pdfFile"
 Write-Host "  - $pdfFileEn"
+Write-Host "  - $pdfFileFr"
+Write-Host "  - $pdfFileDe"
+Write-Host "  - $pdfFileEs"
+Write-Host "  - $pdfFileIt"
