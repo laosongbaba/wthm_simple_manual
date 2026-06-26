@@ -1,7 +1,7 @@
 # Build Script for Product Manual
 $inputFile = "wthm_simple_manual.md"
 $htmlFile = "wthm_simple_manual.html"
-$pdfFile = "wthm_simple_manual.pdf"
+$pdfFile = "wthm_simple_manual_cn.pdf"
 
 $inputFileEn = "wthm_simple_manual_en.md"
 $htmlFileEn = "wthm_simple_manual_en.html"
@@ -9,19 +9,19 @@ $pdfFileEn = "wthm_simple_manual_en.pdf"
 
 $inputFileFr = "wthm_simple_manual_fr.md"
 $htmlFileFr = "wthm_simple_manual_fr.html"
-$pdfFileFr = "wthm_simple_manual_fr.pdf"
+$pdfFileFr = "wthm_manuel_du_produit_fr.pdf"
 
 $inputFileDe = "wthm_simple_manual_de.md"
 $htmlFileDe = "wthm_simple_manual_de.html"
-$pdfFileDe = "wthm_simple_manual_de.pdf"
+$pdfFileDe = "wthm_produkthandbuch_de.pdf"
 
 $inputFileEs = "wthm_simple_manual_es.md"
 $htmlFileEs = "wthm_simple_manual_es.html"
-$pdfFileEs = "wthm_simple_manual_es.pdf"
+$pdfFileEs = "wthm_manual_del_producto_es.pdf"
 
 $inputFileIt = "wthm_simple_manual_it.md"
 $htmlFileIt = "wthm_simple_manual_it.html"
-$pdfFileIt = "wthm_simple_manual_it.pdf"
+$pdfFileIt = "wthm_manuale_del_prodotto_it.pdf"
 
 Write-Host "Checking requirements..."
 if (-not (Get-Command pandoc -ErrorAction SilentlyContinue)) {
@@ -140,9 +140,9 @@ if ($LASTEXITCODE -ne 0) {
 }
 
 Write-Host "Success! PDFs generated at:"
-Write-Host "  - $pdfFile"
-Write-Host "  - $pdfFileEn"
-Write-Host "  - $pdfFileFr"
-Write-Host "  - $pdfFileDe"
-Write-Host "  - $pdfFileEs"
-Write-Host "  - $pdfFileIt"
+Write-Host "  - $pdfFile (Chinese)"
+Write-Host "  - $pdfFileEn (English)"
+Write-Host "  - $pdfFileFr (French)"
+Write-Host "  - $pdfFileDe (German)"
+Write-Host "  - $pdfFileEs (Spanish)"
+Write-Host "  - $pdfFileIt (Italian)"
