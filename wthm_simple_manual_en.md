@@ -31,16 +31,16 @@ Supports IEEE 802.11 b/g/n standard 2.4 GHz band Wi-Fi networks.
 
 # Screen and Key Description
 
-- In normal display mode, the device LCD shows temperature, humidity, and other parameter values.
+- In normal display mode, the device LCD shows temperature, humidity, and other environmental data.
 - Press and hold the √ key for 1 second to enter the device parameter interface, where you can view device IP address, time, MAC address, Wi-Fi network, firmware version, etc.
 - Press and hold the middle ↓ and ↑ keys simultaneously for 5 seconds to enter the Wi-Fi configuration interface. Scan the QR code on the screen with a phone or pad to enter the Wi-Fi configuration program.
 - Press and hold the side ⟲ and √ keys simultaneously for 5 seconds to enter the factory reset interface.
 
 <div class="image-grid compact-grid">
   <div><img src="./images/th-with-sensor.png"></div>
-  <div><img src="./images/panel-ip.png"></div>
-  <div><img src="./images/up-down-hold.png"></div>
-  <div><img src="./images/reset.png"></div>
+  <div><img src="./images/panel-ip-gray.png"></div>
+  <div><img src="./images/up-down-hold-gray.png"></div>
+  <div><img src="./images/reset-gray.png"></div>
 </div>
 
 # Installation Instructions
