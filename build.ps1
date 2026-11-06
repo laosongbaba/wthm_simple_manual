@@ -23,6 +23,10 @@ $inputFileIt = "wthm_simple_manual_it.md"
 $htmlFileIt = "wthm_simple_manual_it.html"
 $pdfFileIt = "wthm_manuale_del_prodotto_it.pdf"
 
+$inputFileNl = "wthm_simple_manual_nl.md"
+$htmlFileNl = "wthm_simple_manual_nl.html"
+$pdfFileNl = "wthm_producthandleiding_nl.pdf"
+
 Write-Host "Checking requirements..."
 if (-not (Get-Command pandoc -ErrorAction SilentlyContinue)) {
     Write-Error "Pandoc is not installed or not in PATH."
@@ -139,6 +143,23 @@ if ($LASTEXITCODE -ne 0) {
     exit $LASTEXITCODE
 }
 
+# --- Dutch Version ---
+Write-Host "Step 1 (NL): Converting Markdown to HTML..."
+pandoc $inputFileNl -o $htmlFileNl --template=template.html --metadata pagetitle="Producthandleiding (NL)" --metadata lang="nl" --standalone
+
+if ($LASTEXITCODE -ne 0) {
+    Write-Error "Pandoc conversion (NL) failed."
+    exit $LASTEXITCODE
+}
+
+Write-Host "Step 2 (NL): Converting HTML to PDF with WeasyPrint..."
+& $weasyCmd $weasyArgs $htmlFileNl $pdfFileNl
+
+if ($LASTEXITCODE -ne 0) {
+    Write-Error "WeasyPrint conversion (NL) failed."
+    exit $LASTEXITCODE
+}
+
 Write-Host "Success! PDFs generated at:"
 Write-Host "  - $pdfFile (Chinese)"
 Write-Host "  - $pdfFileEn (English)"
@@ -146,3 +167,4 @@ Write-Host "  - $pdfFileFr (French)"
 Write-Host "  - $pdfFileDe (German)"
 Write-Host "  - $pdfFileEs (Spanish)"
 Write-Host "  - $pdfFileIt (Italian)"
+Write-Host "  - $pdfFileNl (Dutch)"
